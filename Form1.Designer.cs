@@ -1,4 +1,4 @@
-﻿namespace LiLa
+namespace LiLa
 {
     partial class Form1
     {
@@ -63,7 +63,6 @@
             // 
             // linkLabel1
             // 
-            this.linkLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
@@ -78,7 +77,6 @@
             // 
             // linkLabel2
             // 
-            this.linkLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
@@ -93,7 +91,6 @@
             // 
             // linkLabel3
             // 
-            this.linkLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linkLabel3.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel3.LinkColor = System.Drawing.Color.White;
@@ -108,7 +105,6 @@
             // 
             // linkLabel4
             // 
-            this.linkLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linkLabel4.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel4.LinkColor = System.Drawing.Color.White;
@@ -123,7 +119,6 @@
             // 
             // linkLabel5
             // 
-            this.linkLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linkLabel5.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel5.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel5.LinkColor = System.Drawing.Color.White;
@@ -138,7 +133,6 @@
             // 
             // linkLabel6
             // 
-            this.linkLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.linkLabel6.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel6.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel6.LinkColor = System.Drawing.Color.White;
@@ -173,7 +167,7 @@
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Link Launcher";
-            this.TopMost = true;            
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }

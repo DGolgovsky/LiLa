@@ -90,6 +90,7 @@
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 7;
             this.button1.Text = "Set";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -122,6 +123,7 @@
             this.button3.Size = new System.Drawing.Size(130, 30);
             this.button3.TabIndex = 9;
             this.button3.Text = "Save";
+            this.button3.UseCompatibleTextRendering = true;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -138,6 +140,7 @@
             this.button4.Size = new System.Drawing.Size(130, 30);
             this.button4.TabIndex = 10;
             this.button4.Text = "Update";
+            this.button4.UseCompatibleTextRendering = true;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

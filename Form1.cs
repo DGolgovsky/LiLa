@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
@@ -23,13 +23,14 @@ namespace LiLa
                 i++;
             }
 
-            if (i != 6)
-                while (i != 6)
-                {
-                    CellNum[i] = i;
-                    i++;
-                }
+            while (i != 6)
+            {
+                CellNum[i] = i;
+                i++;
+            }
+
             SR.Close();
+            frm2.updateBase();            
             linkLabel1.Text = frm2.Cell[CellNum[0], 0];
             linkLabel1.Font = new System.Drawing.Font("Segoe Print", 27 - linkLabel1.Text.Length);
             linkLabel2.Text = frm2.Cell[CellNum[1], 0];

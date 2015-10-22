@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="LiLa.exe" version="0.5.1.6" publicKeyToken="54cc51ac57b49c79" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="crw.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="LiLa" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="LiLa.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Параметры манифеста UAC
+          При необходимости изменить уровень управления учетными записями Windows замените 
+          узел requestedExecutionLevel одним из следующих значений.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+        Если вы хотите использовать виртуализацию файлов и реестра для обратной
+             совместимости, удалите узел requestedExecutionLevel.
+ -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LiLa.exe" size="393216">
+      <assemblyIdentity name="LiLa" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>p+spjydwQoEX80V/09c1MGd5mpA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="crw.ico" size="29966">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dY9xCtygEyyBnCScx20QHRxjbUU=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=AMD\Dmitry" issuerKeyHash="b94a69c00ad7c0cd5267da85d5bed54817a5b224" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>+mbcthgQDdaCUYcqUnNM3X5nZeI=</DigestValue></Reference></SignedInfo><SignatureValue>RZw1mhnDQNEBBU9zayY7zypzakuW40jzl+3UiF8ig4UA7hPxUka2r2gPjtip5osXuXu7Xl6QMlLn7XC3BjSn5xuxa2y60sHB21FYG0n7/b1FWE7GhMQf2FTAZJ6jw+1IGq0OImxekqmRVOHim5nfcM9O1ddbLxHssYw35+c9Ghw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tjgVTcwAyh+XC7BLG/1viKXeTq+M+Cr1RX+wHGCv6j5ShmnkcIPuT8R933NO5mLojrS4STGHNxzM0HUaa6bdQ2G7T2mNfaaitV3aKSMklKfl72tFJxzX4/o1TJqJA6OZUJdkT61tet6x048TzbQzYYAkFRkiQN8FxNteSwjYLss=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e265677edd4c73522a875182d60d1018b6dc66fa" Description="" Url=""><as:assemblyIdentity name="LiLa.exe" version="0.5.1.6" publicKeyToken="54cc51ac57b49c79" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=AMD\Dmitry</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>2bEnlcFCM56A1mHTER1aBbNpmoM=</DigestValue></Reference></SignedInfo><SignatureValue>Db5snHwyDZuh+/voVwDSOZSh4UpThw8JYK1skJTq/4XTUszr5H5TJxnb/wF9TK8ITGuLVx4UYHVojglgZohG5FZFeYCrQzkMFyhCrdYR4WW8hZ4yfym3bqnicC7NEkyoJB4giT2MVvtg+RXSvTyvW+oYwPP/otfEenbtyAKnoD8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tjgVTcwAyh+XC7BLG/1viKXeTq+M+Cr1RX+wHGCv6j5ShmnkcIPuT8R933NO5mLojrS4STGHNxzM0HUaa6bdQ2G7T2mNfaaitV3aKSMklKfl72tFJxzX4/o1TJqJA6OZUJdkT61tet6x048TzbQzYYAkFRkiQN8FxNteSwjYLss=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBwTCCASqgAwIBAgIQEdqwXGRR7Z1En+u4cel1dTANBgkqhkiG9w0BAQUFADAfMR0wGwYDVQQDHhQAQQBNAEQAXABEAG0AaQB0AHIAeTAeFw0xMjA3MzExODUxMDlaFw0xMzA4MDEwMDUxMDlaMB8xHTAbBgNVBAMeFABBAE0ARABcAEQAbQBpAHQAcgB5MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2OBVNzADKH5cLsEsb/W+Ipd5Or4z4KvVFf7AcYK/qPlKGaeRwg+5PxH3fc07mYuiOtLhJMYc3HMzQdRprpt1DYbtPaY19pqK1XdopIySUp+Xva0UnHNfj+jVMmokDo5lQl2RPrW163rHTjxPNtDNhgCQVGSJA3wXE215LCNguywIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAGGdrV4e18fl6PbuCc6uA7sQ2/fg/RTxIzXnuUaNJ8U4fg/M+t3wIBHwgs6rqfu+3bVsH/i4d4Csiz6Q/7A8fO8t8dSTYaIZaz+mGRUFT2MEKvWJPk7w8kYldsHOWMC4p1+4wqgS9G4LdolupSNuMAt6337pSd9UMMy+vbGFGbmw</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

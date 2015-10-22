@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +19,12 @@ namespace LiLa
         /// </summary>
         public string[,] Cell = new string[100, 2];
         public int tempIndex;
-        private string UpdLink = "https://zuckrw.blu.livefilestore.com/y1p0O1sNJWKHVT-ddyaEV_B5cViOgXtMydVdrotOyvO9916rxBYjr6ZNC912kb200OXYyJXexzTgxKvSzCGCjLnsA/DataBase?download&psid=1";
+        private string UpdLink = "http://geozemly.ru/DataBase";
         private int[] cellNum = new int[6];
         public string[] defCellName = new string[6] { "Facebook", "ВКонтакте", "Windows Live", "Twitter", "Одноклассники", "Мой Мир" };
         public string[] defCellLink = new string[6] { "facebook.com", "vk.com", "live.com", "twitter.com", "odnoklassniki.ru", "my.mail.ru" };
 
-        public void AddNewItem(string name, string link,bool EditMode, int ind)
+        public void AddNewItem(string name, string link, bool EditMode, int ind)
         {
             int i = 0;
             while (Cell[i, 0] != null)
@@ -236,7 +236,7 @@ namespace LiLa
             if (fs.Exists)
             {
                 StreamReader SR = new StreamReader("DataBase");
-                int i, j, n = 0, jump = 1;
+                int i, j, len, n = 0, jump = 1;
                 int[] pos = new int[Cell.Length / 2];
                 for (i = 0; i < Cell.Length / 2; i++)
                     if (Cell[i, 0] == null) break;
@@ -262,26 +262,24 @@ namespace LiLa
                             pos[n] = jump;
                             n++;
                         }
-                        str = SR.ReadLine();
+                        str = SR.ReadLine();                        
                         check = true;
                         jump++;
                     }
                 }
                 i = j;
+                len = jump - 1;
                 jump = 0;
                 n = 0;
-                if (str == "[#source]")
+                for (int count = 0; count < len; count++)
                 {
-                    while (!SR.EndOfStream)
+                    str = SR.ReadLine();
+                    jump++;
+                    if (jump == pos[n])
                     {
-                        str = SR.ReadLine();
-                        jump++;
-                        if (jump == pos[n])
-                        {
-                            Cell[i, 1] = str;
-                            i++;
-                            n++;
-                        }
+                        Cell[i, 1] = str;
+                        i++;
+                        n++;
                     }
                 }
                 SR.Close();
@@ -291,14 +289,13 @@ namespace LiLa
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 frm3 = new Form3();            
+            Form3 frm3 = new Form3();
             frm3.Show();
             this.Hide();
         }
-
         // Edit Button
         private void button5_Click(object sender, EventArgs e)
-        {            
+        {
             Form3 frm3 = new Form3();
             frm3.Show();
             this.Hide();
