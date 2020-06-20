@@ -30,11 +30,15 @@ namespace LiLa
             if (check)
             {
                 bool EditMode = false;
-                if (label5.Text == "E") EditMode = true;
+                if (label5.Text == "E")
+                {
+                    EditMode = true;
+                }
+
                 Form2 frm2 = new Form2();
                 frm2.AddNewItem(textBox1.Text, textBox2.Text, EditMode, tempIndex);
                 frm2.Show();
-                this.Close();
+                Close();
             }
         }
     }

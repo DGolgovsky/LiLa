@@ -6,8 +6,8 @@ namespace LiLa
 {
     public partial class Form1 : Form
     {
-        private Form2 frm2 = new Form2();
-        private int[] CellNum = new int[6];
+        private readonly Form2 frm2 = new Form2();
+        private readonly int[] CellNum = new int[6];
 
         public void getCellNum()
         {
@@ -15,7 +15,10 @@ namespace LiLa
             int i = 0;
             string str = "";
             while (!SR.EndOfStream && str != "[#cell]")
+            {
                 str = SR.ReadLine();
+            }
+
             while (!SR.EndOfStream && i != 6)
             {
                 CellNum[i] = Convert.ToInt32(SR.ReadLine());

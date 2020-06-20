@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LiLa
+﻿namespace LiLa
 {
-    class updateBase
+    internal class updateBase
     {
 
     }

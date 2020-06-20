@@ -8,14 +8,14 @@ namespace LiLa
 {
     public partial class Form2 : Form
     {
-        private WebClient WC = new WebClient();
+        private readonly WebClient WC = new WebClient();
         /// <summary>
         /// Base of links
         /// </summary>
         public string[,] Cell = new string[100, 2];
         public int tempIndex;
-        private string UpdLink = "http://geozemly.ru/DataBase";
-        private int[] cellNum = new int[6];
+        private readonly string UpdLink = "http://geozemly.ru/DataBase";
+        private readonly int[] cellNum = new int[6];
         public string[] defCellName = new string[6] { "Facebook", "ВКонтакте", "Windows Live", "Twitter", "Одноклассники", "Мой Мир" };
         public string[] defCellLink = new string[6] { "facebook.com", "vk.com", "live.com", "twitter.com", "odnoklassniki.ru", "my.mail.ru" };
 
@@ -23,9 +23,15 @@ namespace LiLa
         {
             int i = 0;
             while (Cell[i, 0] != null)
+            {
                 i++;
+            }
+
             if (EditMode)
+            {
                 i = ind;
+            }
+
             Cell[i, 0] = name;
             Cell[i, 1] = link;
             BuildListBox();
@@ -47,11 +53,13 @@ namespace LiLa
                 }
             }
             if (i < 6)
+            {
                 while (i != 6)
                 {
                     Cell[i, 0] = defCellName[i];
                     i++;
                 }
+            }
 
             i = 0;
             if (str == "[#cell]")
@@ -65,11 +73,13 @@ namespace LiLa
                 }
             }
             if (i < 6)
+            {
                 while (i != 6)
                 {
                     cellNum[i] = i;
                     i++;
                 }
+            }
 
             i = 0;
             if (str == "[#source]")
@@ -82,11 +92,14 @@ namespace LiLa
                 }
             }
             if (i < 6)
+            {
                 while (i != 6)
                 {
                     Cell[i, 1] = defCellLink[i];
                     i++;
                 }
+            }
+
             SR.Close();
         }
 
@@ -125,7 +138,11 @@ namespace LiLa
             listBox1.Items.Clear();
             for (int i = 0; i < 100; i++)
             {
-                if (Cell[i, 0] == null) break;
+                if (Cell[i, 0] == null)
+                {
+                    break;
+                }
+
                 listBox1.Items.Add(Cell[i, 0]);
             }
         }
@@ -143,20 +160,31 @@ namespace LiLa
             sw.WriteLine("[#index]");
             for (int i = 0; i < 100; i++)
             {
-                if (Cell[i, 0] == null) break;
+                if (Cell[i, 0] == null)
+                {
+                    break;
+                }
+
                 sw.WriteLine(Cell[i, 0]);
             }
             sw.WriteLine("[#cell]");
             for (int i = 0; i < 6; i++)
+            {
                 sw.WriteLine(cellNum[i]);
+            }
+
             sw.WriteLine("[#source]");
             for (int i = 0; i < 100; i++)
             {
-                if (Cell[i, 1] == null) break;
+                if (Cell[i, 1] == null)
+                {
+                    break;
+                }
+
                 sw.WriteLine(Cell[i, 1]);
             }
             sw.Close();
-            this.Hide();
+            Hide();
         }
 
         public void SetCell()
@@ -234,7 +262,13 @@ namespace LiLa
                 int i, j, len, n = 0, jump = 1;
                 int[] pos = new int[Cell.Length / 2];
                 for (i = 0; i < Cell.Length / 2; i++)
-                    if (Cell[i, 0] == null) break;
+                {
+                    if (Cell[i, 0] == null)
+                    {
+                        break;
+                    }
+                }
+
                 pos[0] = i;
                 j = i;
                 string str = SR.ReadLine();
@@ -245,11 +279,14 @@ namespace LiLa
                     while (!SR.EndOfStream && str != "[#source]")
                     {
                         for (int k = 0; k < i; k++)
+                        {
                             if (Cell[k, 0].ToLower() == str.ToLower())
                             {
                                 check = false;
                                 break;
                             }
+                        }
+
                         if (check)
                         {
                             Cell[i, 0] = str;
@@ -286,14 +323,14 @@ namespace LiLa
         {
             Form3 frm3 = new Form3();
             frm3.Show();
-            this.Hide();
+            Hide();
         }
         // Edit Button
         private void button5_Click(object sender, EventArgs e)
         {
             Form3 frm3 = new Form3();
             frm3.Show();
-            this.Hide();
+            Hide();
             frm3.textBox1.Text = Cell[listBox1.SelectedIndex, 0];
             frm3.textBox2.Text = Cell[listBox1.SelectedIndex, 1];
             frm3.label5.Text = "E";
@@ -304,7 +341,10 @@ namespace LiLa
         {
             int i = 0;
             while (Cell[i, 0] != null)
+            {
                 i++;
+            }
+
             i--;
             Cell[listBox1.SelectedIndex, 0] = Cell[i, 0];
             Cell[listBox1.SelectedIndex, 1] = Cell[i, 1];
